@@ -1,8 +1,8 @@
 const bot = function () {
 
-    const peekobot = document.getElementById('peekobot');
-    const container = document.getElementById('peekobot-container');
-    const inner = document.getElementById('peekobot-inner');
+    const doggobot = document.getElementById('doggobot');
+    const container = document.getElementById('doggobot-container');
+    const inner = document.getElementById('doggobot-inner');
     let restartButton = null;
 
     const sleep = function (ms) {
@@ -14,8 +14,8 @@ const bot = function () {
     };
 
     const insertNewChatItem = function (elem) {
-        //container.insertBefore(elem, peekobot);
-        peekobot.appendChild(elem);
+        //container.insertBefore(elem, doggobot);
+        doggobot.appendChild(elem);
         scrollContainer();
         //debugger;
         elem.classList.add('activated');
@@ -68,7 +68,7 @@ const bot = function () {
 
         if (!e.target.classList.contains('choice') || 'A' === e.target.tagName) {
             // Target isn't a button, but could be a child of a button.
-            var button = e.target.closest('#peekobot-container .choice');
+            var button = e.target.closest('#doggobot-container .choice');
 
             if (button !== null) {
                 button.click();
