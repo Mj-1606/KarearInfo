@@ -14,10 +14,9 @@ const bot = function () {
     };
 
     const insertNewChatItem = function (elem) {
-        //container.insertBefore(elem, doggobot);
         doggobot.appendChild(elem);
         scrollContainer();
-        //debugger;
+       
         elem.classList.add('activated');
     };
 
@@ -67,7 +66,7 @@ const bot = function () {
     const handleChoice = async function (e) {
 
         if (!e.target.classList.contains('choice') || 'A' === e.target.tagName) {
-            // Target isn't a button, but could be a child of a button.
+            
             var button = e.target.closest('#doggobot-container .choice');
 
             if (button !== null) {
@@ -90,7 +89,7 @@ const bot = function () {
         if (choice.dataset.next) {
             printResponse(chat[choice.dataset.next]);
         }
-        // Need to disable buttons here to prevent multiple choices
+      
     };
 
     const handleRestart = function () {
